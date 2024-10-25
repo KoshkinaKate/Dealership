@@ -1,4 +1,4 @@
-# Online Store
+# Dealership
 
 ## Description of the Project
 
