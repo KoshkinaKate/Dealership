@@ -3,17 +3,15 @@ package com.pluralsight;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-//buffered writer/reader. + creating Dealership object full of vehicles from a file
-//saving info to the file
 public class DealershipFileManager {
     public Dealership getDealership() {
         String line;
-        Dealership dealership = null; // Placeholder for Dealership object
+        Dealership dealership = null;// Placeholder for Dealership object
+        int counter = 0;
         try{
-            // reader for the first line (dealership information)
             BufferedReader br = new BufferedReader(new FileReader("dealership.csv"));
-            int counter = 0;
             while ((line = br.readLine()) !=null){
+                //dealership information
                 if (counter < 1){
                 String [] dealerParts = line.split("\\|");
                 String name = dealerParts[0];
@@ -21,6 +19,7 @@ public class DealershipFileManager {
                 String phoneNumber = dealerParts[2];
                 dealership = new Dealership(name, address, phoneNumber);
                 } else{
+                    //vehicle information
                     String [] vehicleParts = line.split("\\|");
                     int vin = Integer.parseInt(vehicleParts[0]);
                     int year = Integer.parseInt(vehicleParts[1]);
@@ -31,14 +30,16 @@ public class DealershipFileManager {
                     int odometer = Integer.parseInt(vehicleParts[6]);
                     double price = Double.parseDouble(vehicleParts[7]);
                     Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType,color, odometer, price);
-                    dealership.addVehicle(Vehicle);
+                    dealership.addVehicle(vehicle);
                 }
-
+                counter ++;
 
             }
+            br.close();
     } catch (Exception e){
             System.err.println("Error");
         }
+        return dealership;
     }
 
 
