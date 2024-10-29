@@ -41,8 +41,8 @@ public class Dealership {
         return null;
 
     }
-    public List<Vehicle> getAllVehicles( Vehicle vehicle){
-        return inventory;
+    public List<Vehicle> getAllVehicles( ){
+        return null;
 
     }
     public void addVehicle(Vehicle vehicle){
