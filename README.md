@@ -36,14 +36,17 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - IntelliJ IDEA: Used as the primary Integrated Development Environment (IDE) for coding and running the project.
 
 ## Demo
+### Find Vehicle by price range
+### Find Vehicle by make/model
+### Find Vehicle by year
+### Find Vehicle by color
+### Find Vehicle by mileage
+### Find Vehicle by type (car, truck, SUV, van)
 ### Displaying Available Vehicles
 ![LoadingAllVehicles.png](imgs/LoadingAllVehicles.png)
-### Adding Product to the cart
-![AddingProductsToTheCart.png](imgs/AddingProductsToTheCart.png)
-### Removing Product from the cart
-![RemovingProductsToTheCart.png](imgs/RemovingProductsToTheCart.png)
-### Check Out Option
-![CheckOut.png](imgs/CheckOut.png)
+### Adding Vehicle
+### Removing Vehicle
+
 
 ## Future Work
 
