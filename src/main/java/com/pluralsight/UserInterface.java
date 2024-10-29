@@ -11,7 +11,11 @@ public class UserInterface {
     }
 
     public void display(){
+
         init(); // the dealership data
+        System.out.println("Welcome to " + dealership.getName() + "!");
+        System.out.println("Address: " + dealership.getAddress());
+        System.out.println("Phone: " + dealership.getPhone());
         while(true) {
             int option = helperDisplay();
             switch(option){
@@ -54,7 +58,7 @@ public class UserInterface {
 
     public int helperDisplay(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Dealership Menu");
+        System.out.println("Search Menu: ");
         System.out.println("1- Find vehicles within a price range ");
         System.out.println("2- Find vehicles by make/model ");
         System.out.println("3- Find vehicles by year ");
@@ -86,6 +90,7 @@ public class UserInterface {
             System.out.println(vehicle1);
         }
 
+
     }
     //show all the vehicles currently available 
     public void processAllVehiclesRequest(){
@@ -113,6 +118,7 @@ public class UserInterface {
 
     }
     public void processGetAllVehiclesRequest() {
+        displayVehicles(dealership.getAllVehicles());
 
     }
     public void processAddVehicleRequest() {

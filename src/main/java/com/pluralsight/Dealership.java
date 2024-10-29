@@ -20,6 +20,18 @@ public class Dealership {
         this.inventory = new ArrayList<Vehicle>(); // Initializing the ArrayList
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
         return null;
     }
@@ -42,10 +54,13 @@ public class Dealership {
 
     }
     public List<Vehicle> getAllVehicles( ){
-        return null;
+        return inventory;
 
     }
     public void addVehicle(Vehicle vehicle){
+        if (vehicle != null) {
+            inventory.add(vehicle);
+        }
 
     }
     public void removeVehicle( Vehicle vehicle){

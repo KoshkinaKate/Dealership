@@ -37,7 +37,7 @@ public class DealershipFileManager {
             }
             br.close();
     } catch (Exception e){
-            System.err.println("Error");
+            System.err.println("Error: " + e.getMessage());
         }
         return dealership;
     }

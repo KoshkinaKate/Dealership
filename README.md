@@ -2,16 +2,15 @@
 
 ## Description of the Project
 
-This Java console application simulates an online store, allowing users to view products, manage a shopping cart, and proceed to checkout. Users can browse available products, add or remove items from the cart, and confirm purchases.
+This Java console application simulates a dealership management system, allowing users to browse available vehicles, search by various criteria (such as price, make/model, and mileage), and manage the dealership inventory by adding or removing vehicles. Users can interact with a menu-driven interface to easily view and filter vehicles or modify the inventory.
 
 ## User Stories
 
 The following user stories guided the development of this application:
 
-- **As a customer**, I want to view all available products so that I can decide what to purchase.
-- **As a customer**, I want to add products to my cart so that I can purchase them later.
-- **As a customer**, I want to remove products from my cart so that I can manage my purchases.
-
+- **As a customer**, I want to view all available vehicles to see the inventory and select a potential purchase.
+- **As a customer**, I want to search for vehicles based on price, make/model, year, color, mileage, and type so that I can find the vehicle that best meets my needs.
+- **As a user**, I want to add/remove new vehicles to the inventory so that customers have up-to-date options.
 ## Setup
 
 Instructions on how to set up and run the project using IntelliJ IDEA.
@@ -37,8 +36,8 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - IntelliJ IDEA: Used as the primary Integrated Development Environment (IDE) for coding and running the project.
 
 ## Demo
-### Displaying Available Product
-![AllProducts.png](imgs/AllProducts.png)
+### Displaying Available Vehicles
+![LoadingAllVehicles.png](imgs/LoadingAllVehicles.png)
 ### Adding Product to the cart
 ![AddingProductsToTheCart.png](imgs/AddingProductsToTheCart.png)
 ### Removing Product from the cart
@@ -48,10 +47,9 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Future Work
 
-- User Authentication: Allow users to create accounts and log in to manage their orders.
-- Payment Integration: Implement a simulated payment system for users to enter payment details.
+- User Authentication: Allow users to create accounts and log in to manage their searches and add to favorites.
 
 
 ## Thanks
 
-- Thank you to Raymond for continuous support and guidance.
+- Thank you to Raymond and Emre for continuous support and guidance.
