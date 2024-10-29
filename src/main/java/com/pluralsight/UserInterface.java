@@ -43,7 +43,7 @@ public class UserInterface {
                     processRemoveVehicleRequest();
                     break;
                 case 99:
-                    System.out.println("Thank you");
+                    System.out.println("Thank you for visiting our Dealership! ");
                     return;
                 default:
                     System.out.println("Invalid option, please try again.");
@@ -66,6 +66,7 @@ public class UserInterface {
         System.out.println("9- Remove a vehicle ");
         System.out.println("99-  Exit");
 
+        System.out.println("========================");
         System.out.println("Please enter an option: ");
         int option = scanner.nextInt();
         scanner.nextLine();
