@@ -1,5 +1,5 @@
 package com.pluralsight;
-
+//handles reading writing for csv file
 import java.io.*;
 
 public class DealershipFileManager {
@@ -44,7 +44,9 @@ public class DealershipFileManager {
 
 
     public void saveDealership(Dealership dealership) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("dealership.csv"))) { // Overwrite mode
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("dealership.csv"))) { // Overwrite because handles add/remove vehicles
+            writer.write(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhone());
+            writer.newLine(); //in order to keep dealership in csv.
             for (Vehicle vehicle : dealership.getAllVehicles()) {
                 writer.write(vehicle.getVin() + "|" +
                         vehicle.getYear() + "|" +
@@ -59,6 +61,7 @@ public class DealershipFileManager {
         } catch (Exception e) {
             System.out.println("Error saving data: " + e.getMessage());
         }
+        //try/catch close writer automatically
     }
 
 }

@@ -1,5 +1,5 @@
 package com.pluralsight;
-
+//information about dealership and a list of Vehicles objects (inventory);
 import java.util.List;
 import java.util.ArrayList;
 
@@ -7,13 +7,13 @@ public class Dealership {
     private String name;
     private String address;
     private String phone;
-    private ArrayList <Vehicle> inventory;
+    private ArrayList <Vehicle> inventory; //storing collection of vehicles
 
     public Dealership(String name, String address, String phone) {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.inventory = new ArrayList<Vehicle>(); // Initializing the ArrayList
+        this.inventory = new ArrayList<Vehicle>(); // available outside of this class
     }
 
     public String getName() {
@@ -29,15 +29,14 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
-        List<Vehicle> price = new ArrayList<>();
-        for (Vehicle vehicle : inventory) {
-            if( vehicle.getPrice() >= min && vehicle.getPrice() <= max ){
-                price.add(vehicle);
+        List<Vehicle> price = new ArrayList<>(); //List of Vehicle objects; temporary hold data specific to this search
+        for (Vehicle vehicle : inventory) { // iterates over each Vehicle object in inventory.
+            if(vehicle.getPrice() >= min && vehicle.getPrice() <= max ){ //get coming from Vehicle class
+                price.add(vehicle); //add to the price list
             }
         }
         return price;
     }
-
 
     public List<Vehicle> getVehiclesByMakeModel(String make, String model){
         List<Vehicle> makeModel = new ArrayList<>();
@@ -49,7 +48,6 @@ public class Dealership {
         return makeModel;
     }
 
-
     public List<Vehicle> getVehiclesByYear(int min, int max){
         List<Vehicle> year = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
@@ -59,7 +57,6 @@ public class Dealership {
         }
         return year;
     }
-
 
     public List<Vehicle> getVehiclesByColor(String color){
         List<Vehicle> colorCar = new ArrayList<>();
@@ -71,7 +68,6 @@ public class Dealership {
         return colorCar;
     }
 
-
     public List<Vehicle> getVehiclesByMileage(int min,int max){
         List<Vehicle> mileage = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
@@ -81,7 +77,6 @@ public class Dealership {
         }
         return mileage;
     }
-
 
     public List<Vehicle> getVehiclesByType(String vehicleType){
         List<Vehicle> type = new ArrayList<>();
@@ -97,8 +92,9 @@ public class Dealership {
         return inventory;
 
     }
+    //Object Vehicle is named vehicle (placeholder)
     public void addVehicle(Vehicle vehicle){
-        if (vehicle != null) {
+        if (vehicle != null) { //check if it is not null
             inventory.add(vehicle);
         }
 
@@ -108,13 +104,13 @@ public class Dealership {
             inventory.remove(vehicle);
         }
     }
-
+//helper for removeVehicle
     public Vehicle getVehicleByVin(int vin) {
         for (Vehicle vehicle : inventory) {
             if (vehicle.getVin() == vin) {
                 return vehicle; // if the vehicle is VIN matches
             }
         }
-        return null; //if does not match
+        return null; // if VIN does not match
     }
 }

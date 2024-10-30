@@ -1,11 +1,11 @@
 package com.pluralsight;
-
+//menu for a user
 import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
-    private Dealership dealership;
-    private DealershipFileManager fileManager = new DealershipFileManager();
+    private Dealership dealership; //hold Dealership object
+    private DealershipFileManager fileManager = new DealershipFileManager(); //an instance of DFM that assigned to the fileManager
     Scanner scanner = new Scanner(System.in);
 
     //empty constructor
@@ -92,10 +92,6 @@ public class UserInterface {
         }
 
 
-    }
-    //show all the vehicles currently available 
-    public void processAllVehiclesRequest(){
-        displayVehicles(dealership.getAllVehicles());
     }
 
     public void processGetByPriceRequest() {
@@ -189,9 +185,6 @@ public class UserInterface {
         } else {
             System.out.println("Vehicle with VIN " + vin + " not found.");
         }
-
-
-
 
     }
 }

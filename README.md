@@ -53,7 +53,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ### Adding Vehicle
 ![addVehicle.png](imgs/addVehicle.png)
 ### Removing Vehicle
-
+![removeVehicle.png](imgs/removeVehicle.png)
 
 ## Future Work
 
