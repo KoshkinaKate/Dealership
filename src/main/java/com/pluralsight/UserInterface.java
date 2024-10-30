@@ -108,9 +108,21 @@ public class UserInterface {
     }
 
     public void processGetByMakeModelRequest() {
+        System.out.println("Enter make: ");
+        String make = scanner.nextLine();
+        System.out.println("Enter model: ");
+        String model = scanner.nextLine();
+        List<Vehicle> vehicles = dealership.getVehiclesByMakeModel(make, model);
+        displayVehicles(vehicles);
 
     }
     public void processGetByYearRequest() {
+        System.out.println("Enter minimum year:");
+        int minYear = scanner.nextInt();
+        System.out.println("Enter maximum year: ");
+        int maxYear = scanner.nextInt();
+        List<Vehicle> vehicles = dealership.getVehiclesByYear(minYear, maxYear);
+        displayVehicles(vehicles);
 
     }
     public void processGetByColorRequest() {

@@ -36,10 +36,12 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - IntelliJ IDEA: Used as the primary Integrated Development Environment (IDE) for coding and running the project.
 
 ## Demo
-### Find Vehicle by price range!
-[Min:Max Price .png](imgs/Min%3AMax%20Price%20.png)
+### Find Vehicle by price range
+![Min:Max Price .png](imgs/Min%3AMax%20Price%20.png)
 ### Find Vehicle by make/model
+![make:model.png](imgs/make%3Amodel.png)
 ### Find Vehicle by year
+![Years.png](imgs/Years.png)
 ### Find Vehicle by color
 ### Find Vehicle by mileage
 ### Find Vehicle by type (car, truck, SUV, van)
