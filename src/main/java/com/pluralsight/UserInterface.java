@@ -126,6 +126,10 @@ public class UserInterface {
 
     }
     public void processGetByColorRequest() {
+        System.out.println("Enter color: ");
+        String color = scanner.nextLine();
+        List<Vehicle> vehicles = dealership.getVehiclesByColor(color);
+        displayVehicles(vehicles);
 
     }
     public void processGetByMileageRequest() {
