@@ -179,7 +179,17 @@ public class UserInterface {
         System.out.println("Enter VIN to remove a vehicle: ");
         int vin = scanner.nextInt();
         scanner.nextLine();
-        
+
+        Vehicle vehicle = dealership.getVehicleByVin(vin);
+        if (vehicle != null) {
+            //calling method from dealership
+            dealership.removeVehicle(vehicle);
+            fileManager.saveDealership(dealership);
+            System.out.println("Vehicle with VIN " + vin + " was removed successfully.");
+        } else {
+            System.out.println("Vehicle with VIN " + vin + " not found.");
+        }
+
 
 
 
