@@ -45,6 +45,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ### Find Vehicle by color
 ![Color.png](imgs/Color.png)
 ### Find Vehicle by mileage
+![mileages.png](imgs/mileages.png)
 ### Find Vehicle by type (car, truck, SUV, van)
 ### Displaying Available Vehicles
 ![LoadingAllVehicles.png](imgs/LoadingAllVehicles.png)

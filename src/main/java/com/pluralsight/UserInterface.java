@@ -114,7 +114,6 @@ public class UserInterface {
         String model = scanner.nextLine();
         List<Vehicle> vehicles = dealership.getVehiclesByMakeModel(make, model);
         displayVehicles(vehicles);
-
     }
     public void processGetByYearRequest() {
         System.out.println("Enter minimum year:");
@@ -123,17 +122,20 @@ public class UserInterface {
         int maxYear = scanner.nextInt();
         List<Vehicle> vehicles = dealership.getVehiclesByYear(minYear, maxYear);
         displayVehicles(vehicles);
-
     }
     public void processGetByColorRequest() {
         System.out.println("Enter color: ");
         String color = scanner.nextLine();
         List<Vehicle> vehicles = dealership.getVehiclesByColor(color);
         displayVehicles(vehicles);
-
     }
     public void processGetByMileageRequest() {
-
+        System.out.println("Enter minimum mileages:");
+        int minMileages = scanner.nextInt();
+        System.out.println("Enter maximum mileages: ");
+        int maxMileages = scanner.nextInt();
+        List<Vehicle> vehicles = dealership.getVehiclesByMileage(minMileages, maxMileages);
+        displayVehicles(vehicles);
     }
     public void processGetByVehicleTypeRequest() {
 
