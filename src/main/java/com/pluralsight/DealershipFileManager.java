@@ -56,7 +56,6 @@ public class DealershipFileManager {
                         vehicle.getPrice());
                 writer.newLine();
             }
-            System.out.println("All vehicles were saved successfully.");
         } catch (Exception e) {
             System.out.println("Error saving data: " + e.getMessage());
         }

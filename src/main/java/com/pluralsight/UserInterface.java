@@ -176,6 +176,12 @@ public class UserInterface {
 
     }
     public void processRemoveVehicleRequest() {
+        System.out.println("Enter VIN to remove a vehicle: ");
+        int vin = scanner.nextInt();
+        scanner.nextLine();
+        
+
+
 
     }
 }
