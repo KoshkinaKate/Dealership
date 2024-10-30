@@ -51,6 +51,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ### Displaying Available Vehicles
 ![LoadingAllVehicles.png](imgs/LoadingAllVehicles.png)
 ### Adding Vehicle
+![addVehicle.png](imgs/addVehicle.png)
 ### Removing Vehicle
 
 

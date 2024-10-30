@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     private Dealership dealership;
+    private DealershipFileManager fileManager = new DealershipFileManager();
     Scanner scanner = new Scanner(System.in);
 
     //empty constructor
@@ -149,6 +150,29 @@ public class UserInterface {
 
     }
     public void processAddVehicleRequest() {
+        System.out.println("Enter VIN: ");
+        int vin = scanner.nextInt();
+        System.out.println("Enter year: ");
+        int year = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter make: ");
+        String make = scanner.nextLine();
+        System.out.println("Enter model: ");
+        String model = scanner.nextLine();
+        System.out.println("Enter type (car, truck, SUV, van) : ");
+        String type = scanner.nextLine();
+        System.out.println("Enter color: ");
+        String color = scanner.nextLine();
+        System.out.println("Enter mileages: ");
+        int odometer = scanner.nextInt();
+        System.out.println("Enter price: ");
+        double price = scanner.nextDouble();
+
+        Vehicle vehicle = new Vehicle(vin, year, make, model, type, color, odometer, price);
+        dealership.addVehicle(vehicle);
+        fileManager.saveDealership(dealership);
+        System.out.println("Your vehicle was added!");
+
 
     }
     public void processRemoveVehicleRequest() {
