@@ -1,9 +1,5 @@
 package com.pluralsight;
 
-//actual logic here + calculations - everything happens here
-//hold info about the dealership name address etc, + vehicles
-//methods to search vehicles + add/remove
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -33,7 +29,13 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
-        return null;
+        List<Vehicle> price = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if( vehicle.getPrice() >= min && vehicle.getPrice() <= max ){
+                price.add(vehicle);
+            }
+        }
+        return price;
     }
     public List<Vehicle> getVehiclesByMakeModel(String make, String model){
         return null;

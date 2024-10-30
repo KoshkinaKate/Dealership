@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     private Dealership dealership;
+    Scanner scanner = new Scanner(System.in);
 
     //empty constructor
     public UserInterface() {
@@ -57,7 +58,6 @@ public class UserInterface {
     }
 
     public int helperDisplay(){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Search Menu: ");
         System.out.println("1- Find vehicles within a price range ");
         System.out.println("2- Find vehicles by make/model ");
@@ -95,13 +95,18 @@ public class UserInterface {
     //show all the vehicles currently available 
     public void processAllVehiclesRequest(){
         displayVehicles(dealership.getAllVehicles());
-
     }
 
-    // empty methods
     public void processGetByPriceRequest() {
-
+        System.out.println("Enter minimum price:");
+        double minPrice = scanner.nextDouble();
+        System.out.println("Enter maximum price: ");
+        double maxPrice = scanner.nextDouble();
+        //calling method from dealership
+        List<Vehicle> vehicles = dealership.getVehiclesByPrice(minPrice, maxPrice);
+        displayVehicles(vehicles);
     }
+
     public void processGetByMakeModelRequest() {
 
     }
